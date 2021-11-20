@@ -3,6 +3,10 @@ import videojs from "video.js";
 // import "video.js/dist/video-js.css";
 // import "@videojs/themes/dist/forest/index.css";
 
+import ReactPlayer from "react-player";
+
+// Render a YouTube video player
+
 export default function IndexPage() {
   const videoRef = useRef(null);
 
@@ -25,6 +29,10 @@ export default function IndexPage() {
         <h2 className="my-6 ">Hello World.</h2>
         <video controls ref={videoRef} className="video-js vjs-theme-forest" />
       </div>
+      <ReactPlayer
+        controls
+        url="https://tv2.abcnews.al/live/abcnews/playlist.m3u8"
+      />
     </main>
   );
 }
